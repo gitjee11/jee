@@ -1,0 +1,17 @@
+spring:
+  
+      jpa:
+          hibernate:
+            ddl-auto: validate
+          properties:
+            hibernate:
+              hibernate.enable_lazy_load_no_trans: true
+              show_sql: true
+              use_sql_comments: true
+              format_sql: true
+
+      datasource:
+           url: jdbc:mysql://eu-cdbr-west-03.cleardb.net:3306/heroku_f7da8c2ac05d6fe?reconnect?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC
+           username: ba553bcc0ac48f
+           password: 35e9b44e
+           

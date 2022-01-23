@@ -1,0 +1,9 @@
+fr\formation\inti\entity\Customer.class
+fr\formation\inti\entity\Employee.class
+fr\formation\inti\entity\Branch.class
+fr\formation\afpa\App.class
+fr\formation\inti\utils\HibernateUtils.class
+fr\formation\inti\entity\TUsers.class
+fr\formation\afpa\AppHibernate.class
+fr\formation\inti\entity\Department.class
+fr\formation\inti\entity\TRoles.class

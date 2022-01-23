@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head 
+th:replace="fragments/headerload :: load">
+  	<title th:text="'Gestion Des Classes'"></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	
+ </head>
+<body>
+<div th:replace="fragments/header :: header"></div>
+
+<div th:replace="fragments/headerentretien :: headerentretien"></div>
+
+ <div class="showcase1">
+  		<div id="cookies">
+  		<h1> Liste des factures de fiche </h1>
+  		</div>
+      <div class="container showcase-inner">
+      
+		<table class="table table-sm table-light" border="1"th:unless="${action == 'ModifierFactureFiche'}">
+			 <thead class="thead-dark">
+			 	<tr>
+			 	<th>Id</th>
+			 	<th>Fiche</th>
+			 	<th>Client </th>
+			 	<th>PrixHT</th>
+			 	<th>TauxTVA</th>
+			 	<th>Désactiver</th>
+	 	</tr>
+	 </thead>
+	 <tbody>
+	 	<tr th:each="facturefiche : ${listefacturefiche}">
+	 		<td >
+	 		<a	class="btn btn-outline-secondary"
+	 		th:href="@{/afficherModifierFactureFiche/{id}(id=${facturefiche.id})}" 
+	 		th:text="${facturefiche.id}"></a></td>
+	 	
+			<td th:text="${facturefiche.fiche.id}"/>
+			<td th:text="${facturefiche.fiche.client.name}"/>
+	 		<td th:text="${facturefiche.prixht}"/>
+	 		<td> <span> 20 %</span> </td>
+	 		
+	 		<td >
+	 		<a class="btn btn-outline-secondary"
+	 		th:href="@{/DesactiverFactureFiche/{id}(id=${facturefiche.id})}" 
+	 		th:text="'Desactiver'"></a></td>
+	 	</tr>
+	 </tbody>
+ </table>
+ 
+ <div th:replace="fragments/footer :: footer"></div>
+    </div>
+    </div>
+    </body>
+</html>

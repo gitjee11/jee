@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/headerload :: load">
+  	<title th:text="'Gestionnaire de garage'"></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	
+  </head>
+  <body>
+ 	<div th:replace="fragments/header :: header"></div>
+ 	
+ 	<div th:replace="fragments/headervente :: headervente"></div>
+ 
+
+ 
+    <div class="containerhome">
+     <header class="showcase">
+     
+     <div class="containerhome showcase-inner">
+      
+      <h1> GESTIONNAIRE VENTE  </h1>     
+            
+      </div>
+  </header> 
+ 
+      <div th:replace="fragments/footer :: footer"></div>
+    </div>
+    </body>
+</html>

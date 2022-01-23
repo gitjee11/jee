@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+ <head th:replace="fragments/headerload :: load">
+  	<title th:text="'Gestion des devis'"></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<div th:replace="fragments/header :: header"></div>
+
+<div th:replace="fragments/headervente :: headervente"></div>
+ 
+    <div class="showcase1">
+  		<div id="cookies">
+  		<h1> Liste des factures de devis </h1>
+  		</div>
+      <div class="container showcase-inner">
+      
+		<table class="table table-sm table-light" border="1" th:unless="${action == 'ModifierDevis'}">
+	 		<thead class="thead-dark">
+			 	<tr>
+			 	<th>Id</th>
+			 	<th>ID Devis</th>
+			 	<th>Prix Hors Taxe</th>
+			 
+			 	<th>Taux TVA</th>
+			 	<th>Date de création</th>
+	 	
+	 	</tr>
+	 </thead>
+	 <tbody>
+	 	<tr th:each="facturedevis : ${listefacturedevis}">
+	 		<td >
+	 		<a  th:text="${facturedevis.id}"></a></td>
+	 		<td th:text="${facturedevis.devis.id}"/>
+	 		<td th:text="${facturedevis.prixht}"/>
+	 		 		<td th:text="${facturedevis.tauxtva}"/>
+	 
+	 	 	<td th:text="${facturedevis.datecreation}"/> 
+	 		
+	 	</tr>
+	 </tbody>
+ </table>
+ 
+
+ 
+ <div>
+
+ </div>
+ <div th:replace="fragments/footer :: footer"></div>
+    </div>
+    </div>
+    </body>
+</html>

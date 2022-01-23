@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+	<div class="menu-wrap" th:fragment="header">
+		<input type="checkbox" class="toggler">
+		<div class="hamburger">
+			<div></div>
+		</div>
+		<div class="menu">
+			<div>
+				<div>
+					<ul>
+
+						<li><a  th:href="@{/}"> Home </a></li>
+						
+						<li><a  th:href="@{/entretien}"> Entretien </a></li>
+						
+						<li><a  th:href="@{/vente}"> Vente </a></li>
+						
+						<li><a  th:href="@{/stock}"> Stock </a></li>
+						
+						<li><a  th:href="@{/admin}"> Direction </a></li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</body>
